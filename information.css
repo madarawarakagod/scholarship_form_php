@@ -1,0 +1,190 @@
+	
+			*
+			{
+				padding: 10px 0 10px 0;
+				margin: 0;
+				font-family: sans-serif;
+				box-sizing: border-box;
+
+			}
+			body
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;			
+				background-image: url(51.jpg);
+		
+				
+
+			}
+			.Container
+			{
+				max-width: 800;
+				padding: 28px;
+				margin: 0 28px;
+				border-radius: 10px;
+				overflow: hidden;
+				background:   #005580;
+
+				box-shadow: 0 15px 20px rgba(0,0,0,0.6);
+				background: transparent;
+
+			}
+			h2
+			{
+				font-size: 26px;
+				font-weight: bold;
+				text-align: left;
+				color: #005580;
+				border-bottom: 2px solid  black;
+				padding-bottom: 8px;
+			}
+            .content
+            {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 20px 0;
+
+            }
+            .input-box:nth-child(2n)
+            {
+               justify-content: end;
+
+            }
+
+            .intput-box label,gender-title{
+            	width: 95%;
+            	color: #fff;
+            	font-weight: bold;
+            	margin: 5px 0;
+
+            }
+            .gender-title
+            {
+            	font-size: 16px;
+            }
+            .input-box input
+            {
+                height: 30px;
+                width: 95%;
+                padding-left: 5px;
+                border-radius: 5px;
+                border:1px solid #CCC;
+                outline: none;
+                margin: 10px 10px 10px 0px;
+            }
+            .input-box input:is(:focus,:valid)
+            {
+            	box-shadow: 0 3px 6px;
+
+            }
+            .gender-category label
+            {
+            	padding: 0 20px 0 5px;
+            	font-size: 14px;
+            }
+            .gender-category
+            {
+            	color: black;
+            }
+            .gender-category label,.gender-category input-box
+            {
+            	cursor: pointer;
+            }
+
+            .button-container
+            {
+            	margin: 15px 0;
+            }
+            
+            .button-container button
+            {
+               width: 100%;
+               margin-top: 10px;
+               padding: 10px;
+               display: block;
+               font-size: 20px;
+               color: #fff;
+               border:none;
+               border-radius: 5px;
+               background-image: linear-gradient(to right,#aa076b,#61045f);
+               cursor: pointer;
+               transition: 0.3s;
+            }
+
+             .button-container button:hover
+             {
+             	background-image: linear-gradient(to right,#61045f,#aa076b);
+             }
+            
+            #country
+            {
+            	height: 30px;
+                width: 740px;
+                padding: 0 0px;
+                border-radius: 5px;
+                border:1px solid #CCC;
+                outline: none;
+                margin-top: 16px;
+            }
+          
+            
+            input[type=radio]
+             {
+                margin:10px 10px 30px 10px;  
+             } 
+
+            input[type=reset]
+            {
+            	width: 100px;
+            	height: 43px;
+               margin-top: 35px;
+               margin-left: 20px;
+               padding: 10px;
+               display: block;
+               font-size: 20px;
+               color: #fff;
+               border:none;
+               border-radius: 5px;
+               background-image: linear-gradient(to right,#aa076b,#61045f);
+               cursor: pointer;
+               transition: 0.3s;
+
+
+            }
+
+            
+
+
+             @media(max-width:600px){
+             	.Container{
+             		min-width: 280px;
+             	}
+             	.content{
+             		max-height: 380px;
+             		overflow: auto;
+
+             	}
+             	.input-box{
+             		margin-bottom: 12px;
+             		width: 100%;
+             	}
+             	input-box:nth-child(2n){
+             		justify-content: space-between;
+             	}
+             	.gender-category{
+             		display: flex;
+             		justify-content: space-between;
+             		width: 60%;
+             	}
+             	.content::webkit-scrolbar
+             	{
+             		width:0;
+             	}
+             }
+
+
+
+
+	

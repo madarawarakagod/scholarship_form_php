@@ -5,8 +5,7 @@
 }
 
 body{
-	background-color: rgb(0, 100, 153);
-
+	background: rgb(83,15,148);
 }
 
 .form{
@@ -55,11 +54,3 @@ body{
     .title{
     	transform: translate(10px,40px);
     }
-    
-    img{
-    	height:100px ;
-        	width: 70px;
-        	margin: 0px;
-        	padding: 100px;
-        	position: fixed;
-}

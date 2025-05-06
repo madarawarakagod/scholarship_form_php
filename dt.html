@@ -1,0 +1,264 @@
+Fullname
+Contactphone
+ContactAddress
+ContactEmail
+country
+gender
+dob
+Status
+HighSchoolName
+ExtracurricularActivities
+DegreeProgram
+GraduationYear
+Award
+AnnualFamilyIncome
+NoOfdependents
+ExpectedFinancialAid
+NameOfReference
+ReferenceEmail
+ReferencePhone
+RelationshipToApplicant
+
+sub
+
+
+
+
+
+
+FullName        Contact_Phone   Contact_Address Contact_Email   Country Gender  Dob     Marital_Status  High_Scl_name   Extra_Activities        Degree_Program  Graduation_Year Award_Of_Class  Anu_Family_Income       dependent_in_hosuehold  Expected_Financial_Aid  Name_of_Referenceme     Ref_Email       Ref_Phone       Relationship_to_Applicant       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(!empty($_POST['Fullname']) && !empty($_POST['Contactphone']) && !empty($_POST['ContactAddress']) && !empty($_POST['ContactEmail']) && !empty($_POST['country']) && !empty($_POST['gender']) && !empty($_POST['dob']) && !empty($_POST['Status']) && !empty($_POST['HighSchoolName']) && !empty($_POST['ExtracurricularActivities']) && !empty($_POST['DegreeProgram']) && !empty($_POST['GraduationYear']) && !empty($_POST['Award']) && !empty($_POST['AnnualFamilyIncome']) && !empty($_POST['NoOfdependents']) && !empty($_POST['ExpectedFinancialAid']) && !empty($_POST['NameOfReference']) && !empty($_POST['ReferenceEmail']) && !empty($_POST['ReferencePhone']) && !empty($_POST['RelationshipToApplicant'])) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <?php
+
+    require('./connection.php');
+
+    if(isset($_POST['sub'])){
+    $Fullname=$_POST['Fullname'];
+   $Contactphone=$_POST['Contactphone'];
+   $ContactAddress=$_POST['ContactAddress'];
+   $ContactEmail=$_POST['ContactEmail'];
+   $country=$_POST['country'];
+   $gender=$_POST['gender'];
+   $dob=$_POST['dob'];
+   $Status=$_POST['Status'];
+   $HighSchoolName=$_POST['HighSchoolName'];
+   $ExtracurricularActivities=$_POST['ExtracurricularActivities'];
+   $DegreeProgram=$_POST['DegreeProgram'];
+   $GraduationYear=$_POST['GraduationYear'];
+   $Award=$_POST['Award'];
+   $AnnualFamilyIncome=$_POST['AnnualFamilyIncome'];
+   $NoOfdependents=$_POST['NoOfdependents'];
+   $ExpectedFinancialAid=$_POST['ExpectedFinancialAid'];
+   $NameOfReference=$_POST['NameOfReference'];
+   $ReferenceEmail=$_POST['ReferenceEmail'];
+   $ReferencePhone=$_POST['ReferencePhone'];
+   $RelationshipToApplicant=$_POST['RelationshipToApplicant'];
+      
+
+
+
+/*if(!empty($_POST['Fullname'])&& !empty($_POST['Contactphone'])&& !empty($_POST['ContactAddress'])&& !empty($_POST['ContactEmail'])!empty($_POST['country'])&& !empty($_POST['gender'])&& !empty($_POST['dob'])&& !empty($_POST['Status'])!empty($_POST['HighSchoolName'])&& !empty($_POST['ExtracurricularActivities'])&& !empty($_POST['DegreeProgram'])&& !empty($_POST['GraduationYear'])!empty($_POST['Award'])&& !empty($_POST['AnnualFamilyIncome'])&& !empty($_POST['NoOfdependents'])&& !empty($_POST['ExpectedFinancialAid'])!empty($_POST['NameOfReference'])&& !empty($_POST['ReferenceEmail'])&& !empty($_POST['ReferencePhone'])&& !empty($_POST['RelationshipToApplicant']))
+
+{*/
+
+        if(!empty($_POST['Fullname']) && !empty($_POST['Contactphone']) && !empty($_POST['ContactAddress']) && !empty($_POST['ContactEmail']) && !empty($_POST['country']) && !empty($_POST['gender']) && !empty($_POST['dob']) && !empty($_POST['Status']) && !empty($_POST['HighSchoolName']) && !empty($_POST['ExtracurricularActivities']) && !empty($_POST['DegreeProgram']) && !empty($_POST['GraduationYear']) && !empty($_POST['Award']) && !empty($_POST['AnnualFamilyIncome']) && !empty($_POST['NoOfdependents']) && !empty($_POST['ExpectedFinancialAid']) && !empty($_POST['NameOfReference']) && !empty($_POST['ReferenceEmail']) && !empty($_POST['ReferencePhone']) && !empty($_POST['RelationshipToApplicant'])) {
+
+$p=crud::conect()->prepare('INSERT INTO  detail(FullName,Contact_Phone,Contact_Address,Contact_Email,Country,Gender,Dob Marital_Status,High_Scl_name,Extra_Activities,Degree_Program,Graduation_Year,Award_Of_Class,Anu_Family_Income,  dependent_in_hosuehold,Expected_Financial_Aid,Name_of_Referenceme,Ref_Email,Ref_Phone,Relationship_to_Applicant)VALUES(:a,:b,:c,:d,:e,:f,:g,:h,:i,:j,:k,:l,:m,:n,:o,:p,:q,:r,:s,:t)');
+    $p->bindValue(':a',$Fullname);
+    $p->bindValue(':b',$Contactphone);
+    $p->bindValue(':c',$ContactAddress);
+    $p->bindValue(':d',$ContactEmail);
+    $p->bindValue(':e',$country);
+         $p->bindValue(':f',$gender);
+         $p->bindValue(':g',$dob);
+         $p->bindValue(':h',$Status);   
+         $p->bindValue(':i',$HighSchoolName);
+         $p->bindValue(':j',$ExtracurricularActivities);
+               $p->bindValue(':k',$DegreeProgram);
+               $p->bindValue(':l',$GraduationYear);
+               $p->bindValue(':m',$Award);
+               $p->bindValue(':n',$AnnualFamilyIncome);
+               $p->bindValue(':o',$NoOfdependents);
+                     $p->bindValue(':p',$ExpectedFinancialAid);
+                     $p->bindValue(':q',$NameOfReference);
+                     $p->bindValue(':r',$ReferenceEmail);
+                     $p->bindValue(':s',$ReferencePhone);
+                     $p->bindValue(':t',$RelationshipToApplicant);
+                   
+        
+        echo "<script type='text/javascript'> alert('Successfully Register')</script>";
+                
+        
+
+    
+ }else{
+        echo "<script type='text/javascript'> alert('Please fill in all fields')</script>";
+ //     echo 'Please fill in all fields';
+ }
+
+
+}
+?>
+
+
+
+                Fullname
+Contactphone
+ContactAddress
+ContactEmail
+country
+gender
+dob
+Status
+HighSchoolName
+ExtracurricularActivities
+DegreeProgram
+GraduationYear
+Award
+AnnualFamilyIncome
+NoOfdependents
+ExpectedFinancialAid
+NameOfReference
+ReferenceEmail
+ReferencePhone
+RelationshipToApplicant
+sub
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <label for="name" >Your Full Name</label>
+        <input type="text" name="name" value="<?php echo isset($_POST['Name']) ? $_POST['Name'] : ''; ?>">
+                        
+        <label for="phone">Your Contact phone</label>
+        <input type="text" name="phone" value="<?php echo isset($_POST['age']) ? $_POST['age'] : ''; ?>">
+                        
+        <label for="gender">Your Contact gender</label>
+        <input type="text" name="gender" value="<?php echo isset($_POST['gender']) ? $_POST['gender'] : ''; ?>">
+</body>
+</html>
+
+
+
+<?php
+
+echo "Name: ".$_POST['Name']."&nbsp;&nbsp; Mobile: ".$_POST['age'];
+echo "gender: ".$_POST['gender'];
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <label for="name" >Your Full Name</label>
+                                <input type="text" name="name"  >
+                        </div>           
+                        <div class="input-box">
+                                <label for="phone">Your Contact phone</label>
+                                <input type="text"  name="phone">
+                        </div>
+                        <div class="input-box">
+                                <label for="Addres">Your Contact gender</label>
+                                <input type="text" name="Address">
+                        </div>
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+signup page kalin eka .update ekt kalin eka
+
+
+<?php
+
+    require('./connection.php');
+
+    if(isset($_POST['signUP_button'])){
+    $name=$_POST['name'];
+   $lastName=$_POST['lastName'];
+   $email=$_POST['email'];
+   $password=$_POST['password'];
+    $Confirmpassword=$_POST['Confirmpassword'];
+
+if(!empty($_POST['name'])&& !empty($_POST['lastName'])&& !empty($_POST['email'])&& !empty($_POST['password']))
+{
+    if($password==$Confirmpassword){
+        $p=crud::conect()->prepare('INSERT INTO signup(name,lastName,email,password)VALUES(:n,:l,:e,:p)');
+        $p->bindValue(':n',$name);
+        $p->bindValue(':l',$lastName);
+        $p->bindValue(':e',$email);
+        $p->bindValue(':p',$password);
+        $p->execute();
+        echo 'Successfully';
+        header('location:Information.php');
+
+    }else{
+       
+        echo "<script type='text/javascript'> alert('Password does not match')</script>";
+    }
+                    
+    }
+}
+?>
+
+
+
+
+
+

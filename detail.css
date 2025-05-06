@@ -1,0 +1,92 @@
+
+         .header
+         {
+         	text-align: left;
+         	margin: 0;
+         	padding: 0;
+         	font-family: sans-serif;
+         	font-size: 20px;
+         	word-spacing: 2px;
+         	text-indent: 1em;
+         	line-height: 100%;       
+         }
+         img{
+            padding:0 0 0 250px;
+         }
+
+         body
+         {
+         /*	background-color:  #e6f7ff;*/
+         background-image: url(xc7.jpg);
+         }
+         #topic
+         {
+         	font-size: 30px;
+         	font-family:cursive;
+         	text-align: left;
+         	text-decoration: underline;
+         	margin-left: 480px;
+         	margin-top: 60px;
+         }
+        
+           
+            .content
+            {
+            	height: auto;
+            	width: 700px;
+            	background-color:  #005580;
+            	margin-left: 250px;
+            	margin-top: 50px;
+            	padding: 20px;
+            	font-size: 17px;
+            	font-family: sans-serif;
+            	border-radius: 15px;
+
+
+            }            
+            .intput-box label
+            {
+            	width: 95%;
+            	color: #fff;
+            	font-weight: bold;
+            	margin: 5px 0;
+
+            }
+           
+            .input-box input
+            {
+                height: 30px;
+                width: 95%;
+                padding: 0 0px;
+                border-radius: 5px;
+                border:1px solid #CCC;
+                outline: none;
+                margin: 10px;
+            }
+         
+      #but {
+    border: 1px solid black;
+    margin: 20px 20px 20px 150px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: rgb(225, 225, 234);
+
+
+}
+
+ 
+
+
+.first
+{
+   background-color: rgb(239, 239, 245);
+   height: 100px;
+   padding: 10px 10px 15px 10px;
+   border: 10px solid black;
+
+}
